@@ -27,8 +27,8 @@ param tags object = {}
 @description('VM size for the default compute cluster')
 param vmSizeParam string = 'Standard_E4ds_v4'
 
-// resource machineLearningCluster001 'Microsoft.MachineLearningServices/workspaces/computes@2022-05-01' = {
-//   name: '${machineLearning}/cluster001'
+// resource machineLearningCluster002 'Microsoft.MachineLearningServices/workspaces/computes@2022-05-01' = {
+//   name: '${machineLearning}/cluster002'
 //   location: location
 //   identity: {
 //     type: 'SystemAssigned'
@@ -37,7 +37,7 @@ param vmSizeParam string = 'Standard_E4ds_v4'
 //   properties: {
 //     computeType: 'AmlCompute'
 //     computeLocation: location
-//     description: 'Machine Learning cluster 001'
+//     description: 'Machine Learning cluster 002'
 //     disableLocalAuth: true
 //     properties: {
 //       vmPriority: 'Dedicated'
@@ -58,8 +58,8 @@ param vmSizeParam string = 'Standard_E4ds_v4'
 //   }
 // }
 
-resource machineLearningComputeInstance001 'Microsoft.MachineLearningServices/workspaces/computes@2024-04-01' = {
-  name: '${machineLearning}/${prefix}-ci001'
+resource machineLearningComputeInstance002 'Microsoft.MachineLearningServices/workspaces/computes@2024-04-01' = {
+  name: '${machineLearning}/${prefix}-ci002'
   location: location
   identity: {
     type: 'SystemAssigned'
@@ -68,7 +68,7 @@ resource machineLearningComputeInstance001 'Microsoft.MachineLearningServices/wo
   properties: {
     computeType: 'ComputeInstance'
     computeLocation: location
-    description: 'Machine Learning compute instance 001'
+    description: 'Machine Learning compute instance 002'
     disableLocalAuth: true
     properties: {
       applicationSharingPolicy: 'Personal'
